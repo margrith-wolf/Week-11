@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --winning-blocks: rgb(254, 222, 40);
+}
+
+body {
+    font-family: 'Finger Paint', cursive;
+    background-color: black;
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#playerText {
+    font-size: 70px;
+    text-transform: uppercase;
+    color: rgb(10, 194, 255);
+}
+
+#turnText {
+    color:rgb(249, 146, 164);
+    padding-bottom: 10px;
+}
+
+#restartBtn {
+    border: none;
+    background-color: rgb(254, 222, 40);
+    border-radius: 12px;
+    color: black;
+    font-family: 'Finger Paint', cursive;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#restartBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#gameboard {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    color: rgb(10, 194, 255);
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-color: rgb(249, 146, 164);
+}
+
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}
+
